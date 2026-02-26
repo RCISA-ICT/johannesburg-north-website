@@ -1,34 +1,81 @@
 // RCISA Johannesburg North - JavaScript
 
-// Mobile Menu Toggle
-const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+// Mobile Menu Toggle - World Class Implementation
+const mobileMenuToggle = document.getElementById('mobileMenuToggle');
 const navLinks = document.getElementById('navLinks');
+const menuBackdrop = document.getElementById('menuBackdrop');
+const body = document.body;
 
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        const icon = mobileMenuBtn.querySelector('i');
+// Function to open menu
+function openMenu() {
+    if (navLinks) navLinks.classList.add('active');
+    if (mobileMenuToggle) mobileMenuToggle.classList.add('active');
+    if (menuBackdrop) menuBackdrop.classList.add('active');
+    body.style.overflow = 'hidden';
+}
+
+// Function to close menu
+function closeMenu() {
+    if (navLinks) navLinks.classList.remove('active');
+    if (mobileMenuToggle) mobileMenuToggle.classList.remove('active');
+    if (menuBackdrop) menuBackdrop.classList.remove('active');
+    body.style.overflow = '';
+}
+
+// Toggle mobile menu
+if (mobileMenuToggle && navLinks) {
+    mobileMenuToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
         if (navLinks.classList.contains('active')) {
-            icon.classList.remove('fa-bars');
-            icon.classList.add('fa-times');
+            closeMenu();
         } else {
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+            openMenu();
         }
     });
+}
+
+// Close menu when clicking backdrop
+if (menuBackdrop) {
+    menuBackdrop.addEventListener('click', closeMenu);
 }
 
 // Close mobile menu when clicking on a link
 const navLinksItems = document.querySelectorAll('.nav-link');
 navLinksItems.forEach(link => {
     link.addEventListener('click', () => {
-        if (navLinks.classList.contains('active')) {
-            navLinks.classList.remove('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.remove('fa-times');
-            icon.classList.add('fa-bars');
+        if (navLinks && navLinks.classList.contains('active')) {
+            closeMenu();
         }
     });
+});
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    if (navLinks && mobileMenuToggle) {
+        if (navLinks.classList.contains('active') &&
+            !navLinks.contains(e.target) &&
+            !mobileMenuToggle.contains(e.target)) {
+            closeMenu();
+        }
+    }
+});
+
+// Close mobile menu on window resize
+let resizeTimer;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+        if (window.innerWidth > 768 && navLinks && navLinks.classList.contains('active')) {
+            closeMenu();
+        }
+    }, 250);
+});
+
+// Close menu with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && navLinks && navLinks.classList.contains('active')) {
+        closeMenu();
+    }
 });
 
 // Smooth Scrolling
