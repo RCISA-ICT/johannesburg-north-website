@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Donate - RCISA Johannesburg North">
+    <title>Donate - RCISA Johannesburg North</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/rcz-logo.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo-section">
+                    <img src="assets/images/rcz-logo.png" alt="RCZ Logo" class="logo">
+                    <div class="logo-text">
+                        <h1>RCISA</h1>
+                        <p>Johannesburg North</p>
+                    </div>
+                </div>
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About</a></li>
+                    <li><a href="leadership.html" class="nav-link">Leadership</a></li>
+                    <li><a href="ministries.html" class="nav-link">Ministries</a></li>
+                    <li><a href="events.html" class="nav-link">Events</a></li>
+                    <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                    <li><a href="donate.html" class="nav-link active">Donate</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Support Our Ministry</h1>
+            <p>Your generosity helps us serve God and our community</p>
+        </div>
+    </section>
+
+    <!-- Donations Section -->
+    <section class="donate-section">
+        <div class="container">
+            <div class="donate-content">
+                <div class="donate-info">
+                    <h3><i class="fas fa-heart"></i> Why Give?</h3>
+                    <p>Your donations support:</p>
+                    <ul class="donate-list">
+                        <li><i class="fas fa-check-circle"></i> Church operations and maintenance</li>
+                        <li><i class="fas fa-check-circle"></i> Community outreach programs</li>
+                        <li><i class="fas fa-check-circle"></i> Youth and children's ministries</li>
+                        <li><i class="fas fa-check-circle"></i> Supporting those in need</li>
+                        <li><i class="fas fa-check-circle"></i> Spreading the Gospel</li>
+                        <li><i class="fas fa-check-circle"></i> Live streaming services</li>
+                    </ul>
+                    
+                    <div class="bible-verse">
+                        <i class="fas fa-quote-left"></i>
+                        <p>"Each of you should give what you have decided in your heart to give, not reluctantly or under compulsion, for God loves a cheerful giver."</p>
+                        <span>- 2 Corinthians 9:7</span>
+                    </div>
+                </div>
+                
+                <div class="donate-methods">
+                    <h3><i class="fas fa-hand-holding-heart"></i> Ways to Give</h3>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h4>Bank Transfer</h4>
+                        <div class="bank-details">
+                            <p><strong>Bank:</strong> First National Bank</p>
+                            <p><strong>Account Name:</strong> RCISA</p>
+                            <p><strong>Account Number:</strong> 62804341791</p>
+                            <p><strong>Branch Code:</strong> 250655</p>
+                            <p><strong>Reference:</strong> Your Name + "Donation Johannesburg North"</p>
+                        </div>
+                        <button class="btn btn-secondary" onclick="copyBankDetails()">
+                            <i class="fas fa-copy"></i> Copy Details
+                        </button>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h4>Mobile Payment</h4>
+                        <p>Send your donation via:</p>
+                        <div class="mobile-options">
+                            <button class="btn btn-primary">
+                                <i class="fas fa-money-bill-wave"></i> SnapScan
+                            </button>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-qrcode"></i> Zapper
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <h4>Online Donation</h4>
+                        <p>Make a secure online donation:</p>
+                        <button class="btn btn-primary btn-large">
+                            <i class="fas fa-donate"></i> Donate Now
+                        </button>
+                        <p class="secure-note"><i class="fas fa-lock"></i> Secure payment processing</p>
+                    </div>
+                    
+                    <div class="donation-card">
+                        <div class="donation-icon">
+                            <i class="fas fa-church"></i>
+                        </div>
+                        <h4>In-Person</h4>
+                        <p>Give during our Sunday service or visit the church office during the week.</p>
+                        <p><strong>Service Time:</strong> Sunday 10:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="suggested-amounts">
+                <h3>Suggested Donation Amounts</h3>
+                <div class="amount-buttons">
+                    <button class="amount-btn">R100</button>
+                    <button class="amount-btn">R250</button>
+                    <button class="amount-btn">R500</button>
+                    <button class="amount-btn">R1000</button>
+                    <button class="amount-btn">Custom Amount</button>
+                </div>
+            </div>
+            
+            <div class="tax-info">
+                <p><i class="fas fa-info-circle"></i> <strong>Tax Receipts:</strong> Tax-deductible receipts are available upon request. Please contact us with your donation details.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="assets/images/rcz-logo.svg" alt="RCZ Logo" class="footer-logo">
+                    <h3>RCISA Johannesburg North</h3>
+                    <p>Part of the Reformed Church in Zimbabwe (RCZ) family</p>
+                    <p class="footer-tagline">"Kuda Kwenyu Ngakuitwe"</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="leadership.html">Leadership</a></li>
+                        <li><a href="ministries.html">Ministries</a></li>
+                        <li><a href="donate.html">Donate</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Rabie Street & Fourth Ave N<br>Fontainebleau, Randburg, 2194</p>
+                    <p><i class="fas fa-clock"></i> Sunday: 10:00 AM - 2:00 PM</p>
+                    <p><i class="fas fa-envelope"></i> info@rcisa-jnorth.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 RCISA Johannesburg North. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+

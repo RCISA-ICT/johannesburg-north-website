@@ -1,0 +1,39 @@
+PLACEHOLDER IMAGES NEEDED
+=========================
+
+Please add the following images to this folder:
+
+1. rcz-logo.png (200x200px or higher)
+   - Official RCZ (Reformed Church in Zimbabwe) logo
+   - Current file is an SVG placeholder
+   - You can download the official logo from: https://www.rcz.org.zw
+
+2. church-building.jpg (1200x800px recommended)
+   - Photo of the RCISA Johannesburg North church building
+   - Should show the exterior or interior of the church
+   - High quality, well-lit photo
+
+3. rev-munikwa.jpg (600x800px recommended)
+   - Professional photo of Reverend Munikwa
+   - Portrait orientation
+   - Clear, high-quality image
+
+4. mrs-munikwa.jpg (600x800px recommended)
+   - Professional photo of Mrs. Munikwa
+   - Portrait orientation
+   - Clear, high-quality image
+
+TEMPORARY SOLUTION:
+==================
+Until you add real photos, the website will use:
+- The SVG logo (rcz-logo.svg) which is already created
+- Placeholder images from placehold.co (will show automatically)
+
+To add your images:
+1. Take or collect the photos
+2. Rename them exactly as listed above
+3. Place them in this folder (assets/images/)
+4. Refresh the website - images will update automatically!
+
+Note: The website is fully functional even with placeholder images.
+
